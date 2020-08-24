@@ -10,10 +10,10 @@ class CustomText(models.Model):
     title = models.CharField(max_length=150,)
     fk_to_user = models.ForeignKey(
         "users.User",
-        on_delete=models.SET_DEFAULT,
-        default=1,
         null=True,
         blank=True,
+        default=1,
+        on_delete=models.SET_DEFAULT,
         related_name="customtext_fk_to_user",
     )
 
@@ -31,6 +31,14 @@ class CustomText(models.Model):
 
 class HomePage(models.Model):
     body = models.TextField()
+    jkjk = models.OneToOneField(
+        "home.CustomText",
+        on_delete=models.SET_DEFAULT,
+        default=1,
+        null=True,
+        blank=True,
+        related_name="homepage_jkjk",
+    )
 
     @property
     def api(self):
