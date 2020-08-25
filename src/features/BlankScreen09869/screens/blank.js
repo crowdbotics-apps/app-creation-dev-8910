@@ -179,7 +179,7 @@ export class _Blank extends React.Component {
               verticalAlign: "baseline",
               fontSize: 12,
               color: "#000000",
-              backgroundColor: "#3366FF",
+              backgroundColor: "#0939c8",
               fontFamily: "Roboto-Regular",
               borderColor: "#000000",
               borderStyle: "solid",
