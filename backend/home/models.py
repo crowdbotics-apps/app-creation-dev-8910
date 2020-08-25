@@ -33,10 +33,10 @@ class HomePage(models.Model):
     body = models.TextField()
     jkjk = models.OneToOneField(
         "home.CustomText",
-        on_delete=models.SET_DEFAULT,
-        default=1,
         null=True,
         blank=True,
+        default=1,
+        on_delete=models.SET_DEFAULT,
         related_name="homepage_jkjk",
     )
 
@@ -47,3 +47,8 @@ class HomePage(models.Model):
     @property
     def field(self):
         return "body"
+
+
+class NewModel(models.Model):
+    "Generated Model"
+    field = models.CharField(max_length=256,)
